@@ -1,9 +1,4 @@
-local RunService = game:GetService("RunService") do
-	assert(RunService:IsServer() and RunService:IsStudio(), "MoonSec V3 Encrypted Dumper must be ran on the server/in studio")
-	if not pcall(loadstring, "") then
-		error("Loadstring must be enabled to dump MoonSec V3 Encrypted")
-	end
-end
+
 
 local DataToCode do
 	local DataToCode_request, DataToCode_source = pcall(function()
