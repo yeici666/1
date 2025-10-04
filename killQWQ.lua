@@ -1,27 +1,4 @@
--- Intsructions: --
--- 1. Make sure to open Roblox Studio, open up a published place [or publish one if needed], and enable "Allow HTTP requests". --
--- 2. In ServerScriptService, click on the checkbox marked "LoadStringEnabled". [MAKE SURE IT IS CHECKED.] --
--- 3. [NEXT-GEN EXPLORER ONLY]: Make a new script by clicking the plus icon > Script > copy/paste the dumper script from below. --  -- I have no idea if it's the same procedure for the old explorer in RStudio. Testing may be needed. --
--- 4. Paste in the MoonSec v3 obfuscated code at the bottom of the dumper code.
--- 5. Right-click on the created dumper script, highlight on Save/Export > Save as Local Plugin > click Save
--- 6. At the top of the ribbon menu, click on Test > Play > switch to Server [where it says "Current: client"], and let the dumper do its thing. --
 
--- You should see a new tab pop up of the dumped script. --
-
-
-
-
-
--- DUMPER CODE: -- 
-
--- It's not necessarily "secure" but it gets the job done as Federal said he really didnt have any plans on fixing it
-
-local RunService = game:GetService("RunService") do
-	assert(RunService:IsServer() and RunService:IsStudio(), "MoonSec V3 Encrypted Dumper must be ran on the server/in studio")
-	if not pcall(loadstring, "") then
-		error("Loadstring must be enabled to dump MoonSec V3 Encrypted")
-	end
-end
 
 local DataToCode do
 	local DataToCode_request, DataToCode_source = pcall(function()
